@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定工作空间，要与接口名相同，"这里的namespace.下边方法的id"来定位方法的 -->
+<mapper namespace="com.stw.mapper.PatientMapper">
+
+    <resultMap id="BaseResultMap" type="com.stw.bean.PatientBean">
+        <result column="id_card_number" property="id_card_number" />
+        <result column="patient_id" property="patient_id" />
+    </resultMap>
+
+    <!-- queryByCardNum -->
+    <select id="queryByCardNum" resultType="com.stw.bean.PatientBean" resultMap="BaseResultMap">
+        SELECT id_card_number,patient_id FROM t_patient WHERE id_card_number = #{cardNum}
+    </select>
+
+    <!-- queryAllPatientByDate -->
+    <select id="queryAllPatientByDate" resultType="com.stw.bean.PatientBean"  resultMap="BaseResultMap">
+        SELECT id_card_number,patient_id FROM t_patient
+    </select>
+
+
+
+</mapper>
