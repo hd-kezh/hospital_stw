@@ -16,7 +16,7 @@
 
     <!-- queryAllPatientByDate -->
     <select id="queryAllPatientByDate" resultType="com.stw.bean.PatientBean"  resultMap="BaseResultMap">
-        SELECT id_card_number,patient_id FROM t_patient
+        SELECT id_card_number,patient_id FROM t_patient 
     </select>
 
 

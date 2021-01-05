@@ -1,7 +1,5 @@
 package com.stw.bean;
 
-import org.springframework.context.annotation.Bean;
-
 /**
  * 患者
  */

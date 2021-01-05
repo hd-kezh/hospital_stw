@@ -1,5 +1,6 @@
 package com.stw.domain;
 
+import com.alibaba.fastjson.JSONArray;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -16,7 +17,7 @@ public class Rsp {
     //错误码
     @JsonProperty(value = "error_code")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String errorCode;
+    private int errorCode;
     //错误描述
     @JsonProperty(value = "error_msg")
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -24,7 +25,7 @@ public class Rsp {
     //成功时返回的数据
     @JsonProperty(value = "data")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String data;
+    private JSONArray data;
 
     public boolean isSuccess() {
         return success;
@@ -34,19 +35,19 @@ public class Rsp {
         this.success = success;
     }
 
-    public String getData() {
+    public JSONArray getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(JSONArray data) {
         this.data = data;
     }
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
+    public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 
@@ -63,7 +64,7 @@ public class Rsp {
      * @param success
      * @param data
      */
-    public Rsp(boolean success, String data) {
+    public Rsp(boolean success, JSONArray data) {
         this.success = success;
         this.data = data;
     }
@@ -74,7 +75,7 @@ public class Rsp {
      * @param errorCode
      * @param errorMsg
      */
-    public Rsp(boolean success, String errorCode, String errorMsg) {
+    public Rsp(boolean success, int errorCode, String errorMsg) {
         this.success = success;
         this.errorCode = errorCode;
         this.errorMsg = errorMsg;

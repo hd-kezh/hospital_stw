@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 public class ValidatorUtil {
 
     //字符串转日期格式
-//    private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
     //校验请求入参是否满足要求
     public static Rsp check(String[] fields, HttpServletRequest servletRequest) {
