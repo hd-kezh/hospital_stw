@@ -1,60 +1,60 @@
 package com.stw.bean;
 
 /**
- * æ‚£è€…
+ * »¼Õß
  */
 public class PatientBean {
-    //æ‚£è€…Idï¼ˆæ‚£è€…åœ¨é™¢å†…ç³»ç»Ÿä¸­çš„å”¯ä¸€ç¼–ç ï¼Œç”¨äºè¡€é€ç³»ç»Ÿæ‚£è€…ä¸é™¢å†…ç³»ç»Ÿæ‚£è€…è¿›è¡Œå¯¹åº”ï¼Œä»¥ä¸‹patient_idåŒï¼‰
+    //»¼ÕßId£¨»¼ÕßÔÚÔºÄÚÏµÍ³ÖĞµÄÎ¨Ò»±àÂë£¬ÓÃÓÚÑªÍ¸ÏµÍ³»¼ÕßÓëÔºÄÚÏµÍ³»¼Õß½øĞĞ¶ÔÓ¦£¬ÒÔÏÂpatient_idÍ¬£©
     private String patient_id;
-    //æ‚£è€…å§“å
+    //»¼ÕßĞÕÃû
     private String patient_name;
-    //æ€§åˆ«
+    //ĞÔ±ğ
     private String sex;
-    //å‡ºç”Ÿæ—¥æœŸ
+    //³öÉúÈÕÆÚ
     private String date_of_birth;
-    //èº«ä»½è¯å·
+    //Éí·İÖ¤ºÅ
     private String id_card_number;
-    //è‡ªè´¹æ ‡è¯†
+    //×Ô·Ñ±êÊ¶
     private String self_supporting_flag;
-    //åŒ»ç–—ä¿é™©ç±»åˆ«
+    //Ò½ÁÆ±£ÏÕÀà±ğ
     private String medical_insurance_type;
-    //åŒ»ä¿å¡å·
+    //Ò½±£¿¨ºÅ
     private String medical_insurance_code;
-    //å†›å®˜è¯å·
+    //¾ü¹ÙÖ¤ºÅ
     private String officer_certificate_number;
-    //æŠ¤ç…§å·
+    //»¤ÕÕºÅ
     private String passport_number;
-    //æ‚£è€…ç”µè¯
+    //»¼Õßµç»°
     private String patient_phone_number;
-    //å¥åº·æ¡£æ¡ˆç¼–å·
+    //½¡¿µµµ°¸±àºÅ
     private String health_record_number;
-    //ABOè¡€å‹
+    //ABOÑªĞÍ
     private String blood_type;
-    //Rhè¡€å‹
+    //RhÑªĞÍ
     private String rh_blood_type;
-    //å©šå§»çŠ¶å†µ
+    //»éÒö×´¿ö
     private String marital_status;
-    //æ°‘æ—
+    //Ãñ×å
     private String nationality;
-    //å‡ºç”Ÿåœ°
+    //³öÉúµØ
     private String birth_place;
-    //ç±è´¯
+    //¼®¹á
     private String native_place;
-    //å­¦å†
+    //Ñ§Àú
     private String education;
-    //å­¦ä½
+    //Ñ§Î»
     private String dgree;
-    //èŒä¸šç±»åˆ«
+    //Ö°ÒµÀà±ğ
     private String occupation_type;
-    //å·¥ä½œå•ä½åç§°
+    //¹¤×÷µ¥Î»Ãû³Æ
     private String work_unit_name;
-    //å·¥ä½œå•ç”µè¯
+    //¹¤×÷µ¥µç»°
     private String work_unit_phone_number;
-    //è”ç³»äººå§“å
+    //ÁªÏµÈËĞÕÃû
     private String contact_person_name;
-    //è”ç³»äººç”µè¯
+    //ÁªÏµÈËµç»°
     private String contact_person_phone_number;
-    //è”ç³»äººä¸æ‚£è€…å…³ç³»
+    //ÁªÏµÈËÓë»¼Õß¹ØÏµ
     private String contact_person_relationship;
 
     public String getPatient_id() {

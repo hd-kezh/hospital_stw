@@ -2,57 +2,57 @@ package com.stw.bean;
 
 /**
  * Created by kezh
- * function: ç—…ç†æŠ¥å‘Š
+ * function: ²¡Àí±¨¸æ
  * Date : 2021-01-05
  * Time : 14:12
  */
 public class ReportBean {
-    //æŠ¥å‘Šå•ç¼–å·
+    //±¨¸æµ¥±àºÅ
     private String report_number;
-    //æ‚£è€…Id
+    //»¼ÕßId
     private String patient_id;
-    //æ‚£è€…è®°å¿†ä¿¡æ¯
+    //»¼Õß¼ÇÒäĞÅÏ¢
     private String pati_info;
-    //å°±è¯Šç±»å‹
+    //¾ÍÕïÀàĞÍ
     private String visit_type;
-    //å°±è¯Šæµæ°´å·
+    //¾ÍÕïÁ÷Ë®ºÅ
     private String serial_number;
-    //å¯¹åº”çš„ç”³è¯·å•ç¼–å·
+    //¶ÔÓ¦µÄÉêÇëµ¥±àºÅ
     private String application_form_number;
-    //å¯¹åº”çš„ç”³è¯·å•åç§°
+    //¶ÔÓ¦µÄÉêÇëµ¥Ãû³Æ
     private String application_form_name;
-    //ç”³è¯·æ—¥æœŸ
+    //ÉêÇëÈÕÆÚ
     private String application_date;
-    //å‡ºæŠ¥å‘Šæ—¶é—´
+    //³ö±¨¸æÊ±¼ä
     private String report_time;
-    //æŠ¥å‘Šç§‘å®¤-ç¼–å·
+    //±¨¸æ¿ÆÊÒ-±àºÅ
     private String report_department_id;
-    //æŠ¥å‘Šç§‘å®¤-åç§°
+    //±¨¸æ¿ÆÊÒ-Ãû³Æ
     private String report_department_name;
-    //æŠ¥å‘ŠåŒ»å¸ˆ-å·¥å·
+    //±¨¸æÒ½Ê¦-¹¤ºÅ
     private String report_doctor_id;
-    //æŠ¥å‘ŠåŒ»å¸ˆ-å§“å
+    //±¨¸æÒ½Ê¦-ĞÕÃû
     private String report_doctor_name;
-//    //ç”³è¯·å•åç§°
+//    //ÉêÇëµ¥Ãû³Æ
 //    private String application_form_name;
-//    //ç”³è¯·æ—¥æœŸ
+//    //ÉêÇëÈÕÆÚ
 //    private String application_date;
-    //ç”³è¯·åŒ»å¸ˆ-å·¥å·
+    //ÉêÇëÒ½Ê¦-¹¤ºÅ
     private String application_doctor_id;
-    //ç”³è¯·åŒ»å¸ˆ-å§“å
+    //ÉêÇëÒ½Ê¦-ĞÕÃû
     private String application_doctor_name;
-    //æ ‡æœ¬åç§°
+    //±ê±¾Ãû³Æ
     private String sample_name;
-    //ä¸´åºŠè¯Šæ–­
+    //ÁÙ´²Õï¶Ï
     private String clinical_diagnoses;
-    //è‚‰çœ¼æ‰€è§
+    //ÈâÑÛËù¼û
     private String nacked_findings;
-    //é•œä¸‹æ‰€è§
+    //¾µÏÂËù¼û
     private String mirror_findings;
-    //å…ç–«è§å…‰
+    //ÃâÒßÓ«¹â
     private String immu_result;
-    //æ–‡å­—æŠ¥å‘Šå†…å®¹
+    //ÎÄ×Ö±¨¸æÄÚÈİ
     private String report_text;
-    //ç—…ç†è¯Šæ–­
+    //²¡ÀíÕï¶Ï
     private String pathology_diagnoses;
 }

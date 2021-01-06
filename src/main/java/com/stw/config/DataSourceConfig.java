@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 /**
- * sqlserveræ•°æ®æºé…ç½®
+ * sqlserverÊı¾İÔ´ÅäÖÃ
  */
 @Configuration
 public class DataSourceConfig {
@@ -18,7 +18,7 @@ public class DataSourceConfig {
     }
 
     /**
-     * æ— sqlserverç¯å¢ƒä¸‹ç”¨mysqlæµ‹è¯•
+     * ÎŞsqlserver»·¾³ÏÂÓÃmysql²âÊÔ
      * @return
      */
     @ConditionalOnProperty(prefix = "spring.datasource.mysql")

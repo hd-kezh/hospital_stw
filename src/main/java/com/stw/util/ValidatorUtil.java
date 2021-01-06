@@ -13,34 +13,34 @@ import java.text.SimpleDateFormat;
  */
 public class ValidatorUtil {
 
-    //å­—ç¬¦ä¸²è½¬æ—¥æœŸæ ¼å¼
+    //×Ö·û´®×ªÈÕÆÚ¸ñÊ½
     private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
-    //æ ¡éªŒè¯·æ±‚å…¥å‚æ˜¯å¦æ»¡è¶³è¦æ±‚
+    //Ğ£ÑéÇëÇóÈë²ÎÊÇ·ñÂú×ãÒªÇó
     public static Rsp check(String[] fields, HttpServletRequest servletRequest) {
         Rsp rsp = new Rsp();
         for (String field : fields) {
-            //æ ¡éªŒå­—æ®µåå­—å’Œå€¼æ˜¯å¦ä¸ºç©º
+            //Ğ£Ñé×Ö¶ÎÃû×ÖºÍÖµÊÇ·ñÎª¿Õ
             if (checkField(field, servletRequest)) {
-                //æ ¡éªŒå­—æ®µæ ¼å¼
+                //Ğ£Ñé×Ö¶Î¸ñÊ½
                 if(!checkFieldType(field, servletRequest)){
                     rsp.setSuccess(false);
                     rsp.setErrorCode(RspCode.RSPCODE_1.getErrorCode());
-                    rsp.setErrorMsg("è¯·æ±‚ä¸­å­—æ®µ" + servletRequest.getParameter(field) + "ç±»å‹æœ‰è¯¯");
+                    rsp.setErrorMsg("ÇëÇóÖĞ×Ö¶Î" + servletRequest.getParameter(field) + "ÀàĞÍÓĞÎó");
                     return rsp;
                 }
             }else{
                 rsp.setSuccess(false);
                 rsp.setErrorCode(RspCode.RSPCODE_1.getErrorCode());
-                rsp.setErrorMsg("è¯·æ±‚ä¸­å¿…ä¼ å­—æ®µ" + field +"æ²¡ä¼ ,æˆ–è€…" + field + "å­—æ®µçš„å€¼ä¸ºç©º");
+                rsp.setErrorMsg("ÇëÇóÖĞ±Ø´«×Ö¶Î" + field +"Ã»´«,»òÕß" + field + "×Ö¶ÎµÄÖµÎª¿Õ");
                 return rsp;
             }
         }
-        //æ ¡éªŒæŠ¥é”™è¿”å› é”™è¯¯æè¿°ï¼ŒéªŒè¯é€šè¿‡è¿”å›ç©ºå¯¹è±¡
+        //Ğ£Ñé±¨´í·µ»Ø ´íÎóÃèÊö£¬ÑéÖ¤Í¨¹ı·µ»Ø¿Õ¶ÔÏó
         return null;
     }
 
-    //æ ¡éªŒå…¥å‚å­—æ®µåå’Œå€¼æ˜¯å¦ä¸ºç©º
+    //Ğ£ÑéÈë²Î×Ö¶ÎÃûºÍÖµÊÇ·ñÎª¿Õ
     public static boolean checkField(String field, HttpServletRequest request) {
         if(request.getParameter(field)==null || request.getParameter(field).equals("")){
             return false;
@@ -48,7 +48,7 @@ public class ValidatorUtil {
         return true;
     }
 
-    //æ ¡éªŒå…¥å‚å­—æ®µç±»å‹ï¼Œæš‚æ—¶ä¸éœ€è¦ï¼Œåˆ¤æ–­å­—ç¬¦ä¸²ï¼Œæ•´å½¢ï¼Œæ—¥æœŸç­‰ç±»å‹
+    //Ğ£ÑéÈë²Î×Ö¶ÎÀàĞÍ£¬ÔİÊ±²»ĞèÒª£¬ÅĞ¶Ï×Ö·û´®£¬ÕûĞÎ£¬ÈÕÆÚµÈÀàĞÍ
     public static boolean checkFieldType(String field, HttpServletRequest request) {
 
         return true;

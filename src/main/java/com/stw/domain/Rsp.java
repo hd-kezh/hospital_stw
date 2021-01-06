@@ -85,4 +85,13 @@ public class Rsp {
 
     }
 
+    @Override
+    public String toString() {
+        return "Rsp{" +
+                "success=" + success +
+                ", errorCode=" + errorCode +
+                ", errorMsg='" + errorMsg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

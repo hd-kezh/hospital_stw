@@ -30,7 +30,7 @@ public class PatientService {
     private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 //    /**
-//     * æ ¹æ®å»ºæ¡£æ—¶é—´è·å–æ‰€æœ‰æ‚£è€…ä¿¡æ¯
+//     * ¸ù¾İ½¨µµÊ±¼ä»ñÈ¡ËùÓĞ»¼ÕßĞÅÏ¢
 //     *
 //     * @return
 //     */
@@ -54,7 +54,7 @@ public class PatientService {
 //    }
 
     /**
-     * æ ¹æ®å»ºæ¡£æ—¶é—´è·å–æ‰€æœ‰æ‚£è€…ä¿¡æ¯
+     * ¸ù¾İ½¨µµÊ±¼ä»ñÈ¡ËùÓĞ»¼ÕßĞÅÏ¢
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class PatientService {
         }else{
             rsp.setSuccess(false);
             rsp.setErrorCode(RspCode.RSPCODE_5.getErrorCode());
-            rsp.setErrorMsg("è¯¥å»ºæ¡£å‘¨æœŸ"+ startDate + " è‡³ " + endDate + "æ— æŸ¥è¯¢åˆ°æ‚£è€…ä¿¡æ¯");
+            rsp.setErrorMsg("¸Ã½¨µµÖÜÆÚ"+ startDate + " ÖÁ " + endDate + "ÎŞ²éÑ¯µ½»¼ÕßĞÅÏ¢");
             return rsp;
         }
         for (PatientBean patientBean : patientBeanList) {
@@ -83,7 +83,7 @@ public class PatientService {
     }
 
 //    /**
-//     * æ ¹æ®æ‚£è€…å¡å·è·å–æ‚£è€…ä¿¡æ¯
+//     * ¸ù¾İ»¼Õß¿¨ºÅ»ñÈ¡»¼ÕßĞÅÏ¢
 //     * @return
 //     */
 //    public String getPatientbyCardNumber(String cardNumber){
@@ -101,7 +101,7 @@ public class PatientService {
 //    }
 
     /**
-     * æ ¹æ®æ‚£è€…å¡å·è·å–æ‚£è€…ä¿¡æ¯
+     * ¸ù¾İ»¼Õß¿¨ºÅ»ñÈ¡»¼ÕßĞÅÏ¢
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class PatientService {
         } else {
             rsp.setSuccess(false);
             rsp.setErrorCode(RspCode.RSPCODE_5.getErrorCode());
-            rsp.setErrorMsg("æœªæŸ¥è¯¢åˆ°ä»»ä½•ä¿¡æ¯");
+            rsp.setErrorMsg("Î´²éÑ¯µ½ÈÎºÎĞÅÏ¢");
             return rsp;
         }
         for (PatientBean patientBean : patientBeanList) {
@@ -125,9 +125,9 @@ public class PatientService {
             patientMap.put("patient_id", patientBean.getPatient_id());
             patientList.add(patientMap);
         }
-        //dataä¸ºString
+        //dataÎªString
 //        rsp.setData(JSON.toJSONString(patientList));
-        //dataä¸ºJSONArrayæ•°ç»„
+        //dataÎªJSONArrayÊı×é
         rsp.setData(JSON.parseArray(JSON.toJSONString(patientList)));
         return rsp;
 

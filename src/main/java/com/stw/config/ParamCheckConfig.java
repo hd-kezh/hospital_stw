@@ -8,20 +8,20 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author kezh
- * @function æ‹¦æˆªå™¨é…ç½®
+ * @function À¹½ØÆ÷ÅäÖÃ
  * @date 2020/12/30 15:41
  */
-//@Configuration //æ³¨è§£æ‰“å¼€å°±ä¼šåŠ è½½é…ç½®çš„æ‹¦æˆªå™¨
+//@Configuration //×¢½â´ò¿ª¾Í»á¼ÓÔØÅäÖÃµÄÀ¹½ØÆ÷
 public class ParamCheckConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        //æ³¨å†Œå®šä¹‰çš„æ‹¦æˆªå™¨
+        //×¢²á¶¨ÒåµÄÀ¹½ØÆ÷
         InterceptorRegistration registration = registry.addInterceptor(new InputParamCheckInterceptor());
-        //æ‰€æœ‰è·¯å¾„éƒ½è¢«æ‹¦æˆª
+        //ËùÓĞÂ·¾¶¶¼±»À¹½Ø
         registration.addPathPatterns("/**");
-//        registration.excludePathPatterns(                         //æ·»åŠ ä¸æ‹¦æˆªè·¯å¾„
-//                "/**/list",            //listæ¥å£
+//        registration.excludePathPatterns(                         //Ìí¼Ó²»À¹½ØÂ·¾¶
+//                "/**/list",            //list½Ó¿Ú
 //        );
     }
 }

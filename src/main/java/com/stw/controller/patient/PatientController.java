@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
- * æ‚£è€…ç›¸å…³æ¥å£
+ * »¼ÕßÏà¹Ø½Ó¿Ú
  */
 @Slf4j
 @RestController
@@ -25,7 +25,7 @@ public class PatientController {
     private PatientService patientService;
 
 //    /**
-//     * æ ¹æ®å»ºæ¡£æ—¶é—´è·å–æ‰€æœ‰æ‚£è€…ä¿¡æ¯
+//     * ¸ù¾İ½¨µµÊ±¼ä»ñÈ¡ËùÓĞ»¼ÕßĞÅÏ¢
 //     * @return
 //     */
 //    @RequestMapping(value="list",method = RequestMethod.GET)
@@ -36,7 +36,7 @@ public class PatientController {
 //    }
 
 //    /**
-//          * æ ¹æ®å»ºæ¡£æ—¶é—´è·å–æ‰€æœ‰æ‚£è€…ä¿¡æ¯
+//          * ¸ù¾İ½¨µµÊ±¼ä»ñÈ¡ËùÓĞ»¼ÕßĞÅÏ¢
 //          * @return
 //          */
 //    @RequestMapping(value="list",method = RequestMethod.GET)
@@ -48,7 +48,7 @@ public class PatientController {
 
 
 //    /**
-//     * æ ¹æ®æ‚£è€…å¡å·è·å–æ‚£è€…ä¿¡æ¯
+//     * ¸ù¾İ»¼Õß¿¨ºÅ»ñÈ¡»¼ÕßĞÅÏ¢
 //     * @return
 //     */
 //    @RequestMapping(value="/ssss",method = RequestMethod.GET)
@@ -58,7 +58,7 @@ public class PatientController {
 //    }
 
     /**
-     * æ ¹æ®å»ºæ¡£æ—¶é—´è·å–æ‰€æœ‰æ‚£è€…ä¿¡æ¯
+     * ¸ù¾İ½¨µµÊ±¼ä»ñÈ¡ËùÓĞ»¼ÕßĞÅÏ¢
      * @return
      */
     @RequestMapping(value="list",method = RequestMethod.GET)
@@ -72,7 +72,7 @@ public class PatientController {
     }
 
     /**
-     * æ ¹æ®æ‚£è€…å¡å·è·å–æ‚£è€…ä¿¡æ¯
+     * ¸ù¾İ»¼Õß¿¨ºÅ»ñÈ¡»¼ÕßĞÅÏ¢
      * @return
      */
     @RequestMapping(value="",method = RequestMethod.GET)

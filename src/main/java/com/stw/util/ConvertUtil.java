@@ -6,7 +6,7 @@ import java.util.*;
 
 /**
  * Created by kezh
- * function: ç±»å‹è½¬æ¢å·¥å…·ç±»
+ * function: ÀàĞÍ×ª»»¹¤¾ßÀà
  * Date : 2021-01-05
  * Time : 10:44
  */
@@ -14,20 +14,20 @@ public class ConvertUtil {
 
     /**
      *
-     * Mapè½¬String
+     * Map×ªString
      * @param map
      * @return
      */
     public static String getMapToString(Map<String,Object> map){
         Set<String> keySet = map.keySet();
-        //å°†seté›†åˆè½¬æ¢ä¸ºæ•°ç»„
+        //½«set¼¯ºÏ×ª»»ÎªÊı×é
         String[] keyArray = keySet.toArray(new String[keySet.size()]);
-        //ç»™æ•°ç»„æ’åº(å‡åº)
+        //¸øÊı×éÅÅĞò(ÉıĞò)
         Arrays.sort(keyArray);
-        //å› ä¸ºStringæ‹¼æ¥æ•ˆç‡ä¼šå¾ˆä½çš„ï¼Œæ‰€ä»¥è½¬ç”¨StringBuilder
+        //ÒòÎªStringÆ´½ÓĞ§ÂÊ»áºÜµÍµÄ£¬ËùÒÔ×ªÓÃStringBuilder
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < keyArray.length; i++) {
-            // å‚æ•°å€¼ä¸ºç©ºï¼Œåˆ™ä¸å‚ä¸ç­¾å è¿™ä¸ªæ–¹æ³•trim()æ˜¯å»ç©ºæ ¼
+            // ²ÎÊıÖµÎª¿Õ£¬Ôò²»²ÎÓëÇ©Ãû Õâ¸ö·½·¨trim()ÊÇÈ¥¿Õ¸ñ
             if ((String.valueOf(map.get(keyArray[i]))).trim().length() > 0) {
                 sb.append(keyArray[i]).append(":").append(String.valueOf(map.get(keyArray[i])).trim());
             }
@@ -40,46 +40,23 @@ public class ConvertUtil {
 
     /**
      *
-     * Stringè½¬map
+     * String×ªmap
      * @param str
      * @return
      */
     public static Map<String,Object> getStringToMap(String str){
-        //æ ¹æ®é€—å·æˆªå–å­—ç¬¦ä¸²æ•°ç»„
+        //¸ù¾İ¶ººÅ½ØÈ¡×Ö·û´®Êı×é
         String[] str1 = str.split(",");
-        //åˆ›å»ºMapå¯¹è±¡
+        //´´½¨Map¶ÔÏó
         Map<String,Object> map = new HashMap<>();
-        //å¾ªç¯åŠ å…¥mapé›†åˆ
+        //Ñ­»·¼ÓÈëmap¼¯ºÏ
         for (int i = 0; i < str1.length; i++) {
-            //æ ¹æ®":"æˆªå–å­—ç¬¦ä¸²æ•°ç»„
+            //¸ù¾İ":"½ØÈ¡×Ö·û´®Êı×é
             String[] str2 = str1[i].split(":");
-            //str2[0]ä¸ºKEY,str2[1]ä¸ºå€¼
+            //str2[0]ÎªKEY,str2[1]ÎªÖµ
             map.put(str2[0],str2[1]);
         }
         return map;
-    }
-
-    /**
-     *
-     *@Title:  ListToArray
-     *@Description: liståˆ—è¡¨è½¬æ¢æˆäºŒç»´æ•°ç»„
-     *@Author: Administrator
-     *@Since: 2018å¹´1æœˆ7æ—¥ä¸‹åˆ2:01:25
-     *@param: @param list
-     *@param: @param KeyLenghtæ¯è¡Œçš„åˆ—æ•°ï¼ŒæŒ‰æœ€é•¿çš„è®¡ç®—
-     *@param: @return
-     *@return Object[][]
-     */
-    public static Object[][] ListToArray(List<Map<String, Object>> list, int KeyLenght) {
-        if (CollectionUtils.isEmpty(list)) {
-            return new Object[0][];
-        }
-        int size = list.size();
-        Object[][] array = new Object[size][KeyLenght];
-        for (int i = 0; i < size; i++) {//å¾ªç¯éå†æ‰€æœ‰è¡Œ
-            array[i] = list.get(i).values().toArray();//æ¯è¡Œçš„åˆ—æ•°
-        }
-        return array;
     }
 
 }

@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * Created by kezh
- * function: èµ„æºè®¿é—®é”™è¯¯æ˜ å°„
+ * function: ×ÊÔ´·ÃÎÊ´íÎóÓ³Éä
  * Date : 2021-01-05
  * Time : 9:54
  */
@@ -38,16 +38,16 @@ public class ErrorRspCrontroller extends AbstractErrorController {
 //        String path = errorAttributes.containsKey("path") ? (String)errorAttributes.get("path"):"no path";
         Rsp rsp = new Rsp();
         rsp.setSuccess(false);
-        //4xx è¯·æ±‚é”™è¯¯çš„
+        //4xx ÇëÇó´íÎóµÄ
         if(status.substring(0,1).equals("4")){
             rsp.setErrorCode(RspCode.RSPCODE_0.getErrorCode());
-            rsp.setErrorMsg(RspCode.RSPCODE_0.getErrorMsg() + "ï¼Œå…·ä½“é”™è¯¯ä¿¡æ¯ï¼š" + ConvertUtil.getMapToString(errorAttributes));
-        }else if (status.substring(0,1).equals("5")){ //5xx æœåŠ¡å™¨é”™è¯¯
+            rsp.setErrorMsg(RspCode.RSPCODE_0.getErrorMsg() + "£¬¾ßÌå´íÎóĞÅÏ¢£º" + ConvertUtil.getMapToString(errorAttributes));
+        }else if (status.substring(0,1).equals("5")){ //5xx ·şÎñÆ÷´íÎó
             rsp.setErrorCode(RspCode.RSPCODE_4.getErrorCode());
-            rsp.setErrorMsg(RspCode.RSPCODE_4.getErrorMsg() + "ï¼Œå…·ä½“é”™è¯¯ä¿¡æ¯ï¼š" + ConvertUtil.getMapToString(errorAttributes));
-        }else {//å…¶ä»–é™¤2xx æˆåŠŸçš„å…¶ä»–é”™è¯¯ä¿¡æ¯
+            rsp.setErrorMsg(RspCode.RSPCODE_4.getErrorMsg() + "£¬¾ßÌå´íÎóĞÅÏ¢£º" + ConvertUtil.getMapToString(errorAttributes));
+        }else {//ÆäËû³ı2xx ³É¹¦µÄÆäËû´íÎóĞÅÏ¢
             rsp.setErrorCode(RspCode.RSPCODE_5.getErrorCode());
-            rsp.setErrorMsg(RspCode.RSPCODE_5.getErrorMsg() + "ï¼Œå…·ä½“é”™è¯¯ä¿¡æ¯ï¼š" + ConvertUtil.getMapToString(errorAttributes));
+            rsp.setErrorMsg(RspCode.RSPCODE_5.getErrorMsg() + "£¬¾ßÌå´íÎóĞÅÏ¢£º" + ConvertUtil.getMapToString(errorAttributes));
         }
 
         return rsp;
